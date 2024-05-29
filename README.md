@@ -1,4 +1,4 @@
-# Run GitHub CI in OpenBSD ![Test](https://github.com/vmactions/openbsd-vm/workflows/Test/badge.svg)
+# Run GitHub CI in OpenBSD ![Test](https://github.com/clyfly/openbsd-vm/workflows/Test/badge.svg)
 
 Use this action to run your CI in OpenBSD.
 
@@ -26,7 +26,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Test in OpenBSD
       id: test
-      uses: vmactions/openbsd-vm@v1
+      uses: clyfly/openbsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -48,7 +48,7 @@ jobs:
 ```
 
 
-The latest major version is: `v1`, which is the most recommended to use. (You can also use the latest full version: `v1.0.8`)  
+The latest major version is: ``, which is the most recommended to use. (You can also use the latest full version: ``)  
 
 
 If you are migrating from the previous `v0`, please change the `runs-on: ` to `runs-on: ubuntu-latest`
@@ -81,7 +81,7 @@ The code is shared from the host to the VM via `rsync` by default, you can choos
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openbsd-vm@v1
+      uses: clyfly/openbsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -110,7 +110,7 @@ When using `rsync`,  you can define `copyback: false` to not copy files back fro
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openbsd-vm@v1
+      uses: clyfly/openbsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -136,7 +136,7 @@ You can add NAT port between the host and the VM.
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openbsd-vm@v1
+      uses: clyfly/openbsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -156,7 +156,7 @@ The default memory of the VM is 6144MB, you can use `mem` option to set the memo
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openbsd-vm@v1
+      uses: clyfly/openbsd-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -174,7 +174,7 @@ It uses [the OpenBSD 7.5](conf/default.release.conf) by default, you can use `re
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openbsd-vm@v1
+      uses: clyfly/openbsd-vm@
       with:
         release: "7.3"
 ...
